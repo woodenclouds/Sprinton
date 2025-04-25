@@ -6,17 +6,18 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Laralink">
+    <meta name="description" content="SprintOn is a trusted IT service and product development company, transforming ideas into innovative digital solutions. We help businesses grow with tailored software, web, and mobile solutions." />
+
     <!-- Favicon Icon -->
     <link rel="icon" href="assets/img/favicon.png">
     <!-- Site Title -->
-    <title>SprintOn - Your Partner in Digital
-      Business Success</title>
+    <title>SprintOn | Transforming Ideas into Innovative IT Solutions</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="assets/css/swiper.min.css">
     <link rel="stylesheet" href="assets/css/odometer.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style2.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   </head>
@@ -39,14 +40,14 @@
           <div class="cs_main_header_in">
             <div class="cs_main_header_left">
               <a class="cs_site_branding" href="index.html">
-                <img src="assets/img/logo.svg" alt="Logo" width="100%">
+                <img src="assets/img/logo.png" alt="Logo" width="100%">
               </a>
             </div>
             <div class="cs_main_header_center">
               <div class="cs_nav cs_medium cs_primary_font">
                 <ul class="cs_nav_list">
                   <li><a href="index.html">Home</a></li>
-                  <li><a href="about.html">About</a></li>
+                  <li><a href="about.html">About Us</a></li>
                   <li><a href="service.html">Services</a></li>
                   <!-- <li><a href="blog.html">Blog</a></li> -->
                   <li><a href="contact.html">Contact</a></li>
@@ -148,7 +149,7 @@
           <div class="cs_height_143 cs_height_lg_75"></div>
           <div class="container" id="services-section-home">
             <div class="cs_section_heading cs_style_1 cs_type_1 text-center">
-              <p class="cs_section_subtitle cs_accent_color cs_fs_18 mb-0">Service</p>
+              <p class="cs_section_subtitle cs_accent_color cs_fs_18 mb-0">Services</p>
               <div class="cs_height_10 cs_height_lg_5"></div>
               <h2 class="cs_section_title cs_fs_50 mb-0 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Our Expertise, Your Success
               </h2>
@@ -543,7 +544,7 @@
 
     <!-- Start CTA Section -->
     <section>
-      <div class="cs_height_150 cs_height_lg_80"></div>
+      <div class="cs_height_40 cs_height_lg_50"></div>
       <div class="container">
         <div class="cs_cta cs_style_1 cs_bg_filed position-relative cs_radius_5 overflow-hidden text-center" data-src="assets/img/tech-startup/cta_bg.jpeg">
           <div class="cs_cta_in position-relative">
@@ -592,7 +593,7 @@
                 <h2 class="cs_widget_title">Quick Links</h2>
                 <ul class="cs_menu_widget cs_mp0">
                   <li><a href="index.html">Home</a></li>
-                  <li><a href="about.html">About</a></li>
+                  <li><a href="about.html">About Us</a></li>
                   <li><a href="service.html">Services</a></li>
                   <!-- <li><a href="blog.html"></a>Blog</li> -->
                   <li><a href="contact.html">Contact</a></li>
@@ -605,22 +606,22 @@
                 <h2 class="cs_widget_title">Services</h2>
                 <ul class="cs_menu_widget cs_mp0">
                   <li>
-                    <a href="#">Custom Software Development</a>
+                    <a href="service.html">Custom Software Development</a>
                   </li>
                   <li>
-                    <a href="#">Product Development</a>
+                    <a href="service.html">Product Development</a>
                   </li>
                   <li>
-                    <a href="#">IT Consulting</a>
+                    <a href="service.html">IT Consulting</a>
                   </li>
                   <li>
-                    <a href="#">Cloud Solutions</a>
+                    <a href="service.html">Cloud Solutions</a>
                   </li>
                   <li>
-                    <a href="#">UI/UX Design</a>
+                    <a href="service.html">UI/UX Design</a>
                   </li>
                   <li>
-                    <a href="#">Project/Process Consulting</a>
+                    <a href="service.html">Project/Process Consulting</a>
                   </li>
                 </ul>
               </div>
@@ -658,7 +659,7 @@
       <div class="container">
         <div class="cs_bottom_footer">
           <div class="cs_bottom_footer_left">
-            <div class="cs_social_btns cs_style_1">
+            <!-- <div class="cs_social_btns cs_style_1">
               <a href="#" class="cs_center">
                 <i class="fa-brands fa-linkedin-in"></i>
               </a>
@@ -671,9 +672,10 @@
               <a href="#" class="cs_center">
                 <i class="fa-brands fa-slack"></i>
               </a>
-            </div>
+            </div> -->
+            Copyright © <span id="year"></span> SprintOn.
           </div>
-          <div class="cs_copyright">Copyright © 2025 SprintOn.</div>
+          <!-- <div class="cs_copyright">Copyright © 2025 SprintOn.</div> -->
           <div class="cs_bottom_footer_right">
             <ul class="cs_footer_links cs_mp0">
               <li>
@@ -697,6 +699,13 @@
     <!-- End Scroll Up -->
 
     <!-- Script -->
+
+    <script>
+      // Get the current year
+      const currentYear = new Date().getFullYear();
+      // Set the current year in the span with id "year"
+      document.getElementById('year').textContent = currentYear;
+    </script>
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/swiper.min.js"></script>
