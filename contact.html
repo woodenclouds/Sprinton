@@ -74,7 +74,7 @@
         <h2 class="cs_section_title cs_fs_68 mb-0">Get in touch for more <br>information and support</h2>
       </div>
       <div class="cs_shape_4">
-        <img src="assets/img/icons/send.svg" alt="Mail">
+        <!-- <img src="assets/img/icons/send (2) (1) 1.svg" alt="Mail"> -->
       </div>
     </div>
     <div class="cs_height_85 cs_height_lg_45"></div>
@@ -121,11 +121,11 @@
                 <div class="cs_height_38 cs_height_lg_25"></div>
               
                 <label class="cs_fs_21 cs_semibold cs_contact_color">Project brief</label>
-                <textarea name="message" id="project-brief" cols="30" rows="5" class="cs_form_field" required></textarea>
+                <textarea name="message" id="projectbrief" cols="30" rows="5" class="cs_form_field" required></textarea>
               
                 <div class="cs_height_38 cs_height_lg_25"></div>
               
-                <button type="submit" class="cs_btn cs_style_2 cs_contact_color" id="contact-btn">
+                <button type="submit" class="cs_btn cs_style_1 cs_btn_white" id="contact-btn">
                   Send Message <span><i class="fa-solid fa-arrow-right"></i></span>
                 </button>
               </form>
@@ -209,8 +209,8 @@
                       </a>
                     </li>
                     <li> 
-                      <a href="mailto:info@sprinton.com">
-                        <i class="fas fa-envelope"></i> &nbsp; info@sprinton.com
+                      <a href="mailto:info@sprintontech.com">
+                        <i class="fas fa-envelope"></i> &nbsp; info@sprintontech.com
                       </a>
                     </li>
                     <li> 
@@ -277,6 +277,54 @@
       // Set the current year in the span with id "year"
       document.getElementById('year').textContent = currentYear;
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialize EmailJS
+        emailjs.init("uJEd3byJkzECacYFe");
+    
+        document.getElementById("contact-form").addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent default form submission
+    
+          // Get form values
+          var formData = {
+            fullname: document.getElementById("fullname").value,
+            email: document.getElementById("email").value,
+            phone: document.getElementById("phone").value,
+            projectbrief: document.getElementById("projectbrief").value
+          };
+    
+          // Send email using EmailJS
+          emailjs.send("service_h5o99v5", "template_fdvh98r", formData)
+            .then(function (response) {
+              Swal.fire({
+                title: "Success!",
+                text: "Your message was sent successfully.",
+                icon: "success",
+                confirmButtonText: "OK",
+                confirmButtonColor: "#FF470F"
+
+              });
+    
+              // Clear the form
+              document.getElementById("contact-form").reset();
+            })
+            .catch(function (error) {
+              Swal.fire({
+                title: "Oops!",
+                text: "Something went wrong. Please try again later.",
+                icon: "error",
+                confirmButtonText: "OK",
+                confirmButtonColor: "red"
+              });
+            });
+        });
+      });
+    </script>
+    
+    
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/swiper.min.js"></script>
